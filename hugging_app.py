@@ -10,10 +10,7 @@ from langchain_groq import ChatGroq
 
 st.title("Coursework Q&A")
 
-# Load the GROQ API KEY
-groq_api_key = os.getenv('GROQ_API_KEY')
-if not groq_api_key and "GROQ_API_KEY" in st.secrets:
-    groq_api_key = st.secrets["GROQ_API_KEY"]
+groq_api_key = st.secrets["GROQ_API_KEY"]
 
 if not groq_api_key:
     st.error("Please set your GROQ_API_KEY as an environment variable or in Streamlit secrets.")
