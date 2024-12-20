@@ -74,7 +74,7 @@ retrievalQA = RetrievalQA.from_chain_type(
     chain_type_kwargs={"prompt": prompt}
 )
 
-st.write("Ask question:")
+
 query = st.text_input("Enter your query", "")
 
 if st.button("Get Answer") and query.strip():
